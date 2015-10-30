@@ -22,11 +22,11 @@ public class SchoolInfoController {
     @Autowired
     private SchoolInfoService SchoolInfoService;
 
-    @RequestMapping("/showschools")
-    public ModelAndView showschools() {
+    @RequestMapping("/ss")
+    public ModelAndView schoolScores() {
         List<SchoolScore> schoolScores = SchoolInfoService.getSchoolScores();
-        ModelAndView modelAndView = new ModelAndView("s");
-        modelAndView.addObject("showschools", schoolScores);
+        ModelAndView modelAndView = new ModelAndView("schoolScores");
+        modelAndView.addObject("schoolScores", schoolScores);
         return modelAndView;
     }
 
